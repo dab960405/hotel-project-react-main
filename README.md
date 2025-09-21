@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+🌐 Hotel SPA — Aplicación Web Accesible
+Esta es una Single Page Application (SPA) desarrollada en React para la gestión y presentación de la información de un hotel.
+La app incluye secciones de inicio, servicios, habitaciones, equipo, testimonios y formularios de contacto y reserva.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Está construida siguiendo las pautas de accesibilidad WCAG 2.1 nivel AA, logrando un puntaje de 100 en accesibilidad (Lighthouse: mobile & desktop) y 0 issues en axe DevTools ✅.
 
-## Available Scripts
+✨ Características principales
+Interfaz accesible: navegación totalmente operable con teclado, foco visible y orden de tabulación lógico.
+Contraste corregido: todos los elementos de texto y botones cumplen la ratio mínima AA.
+Estructura semántica: uso de header, main, footer, section, article con jerarquía de headings correcta (h1 → h2 → h3).
+Textos alternativos y ARIA: imágenes con alt descriptivos, íconos como decorativos (aria-hidden="true"), y aria-label en enlaces sin texto visible.
+Formularios accesibles: inputs con label, campos obligatorios con required, mensajes de ayuda con aria-describedby.
+Responsive: diseño responsivo utilizando React + Bootstrap, optimizado para móvil y escritorio.
 
-In the project directory, you can run:
 
-### `npm start`
+📂 Estructura de la aplicación
+text
+src/
+ ├── components/
+ │   ├── common/        # Header, Footer, CommonHeading, SocialIcons
+ │   ├── home/          # Carousel, About, Services, Rooms, Teams, Sliders
+ │   ├── data/          # Data.js (habitaciones, servicios, redes sociales, etc.)
+ │   └── css/           # style.css con correcciones de accesibilidad (contraste, focus)
+ ├── pages/             # Home, AboutUs, Booking, Rooms, Team, Testimonial, Contact, PageNotFound
+ ├── App.js             # Rutas principales con React Router
+ ├── index.js           # Bootstrap + render principal
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🚀 Instalación y ejecución
+Clona este repositorio:
+bash
+git clone https://github.com/tu-usuario/hotel-spa-accesible.git
+Instala las dependencias:
+bash
+npm install
+Inicia el servidor en modo desarrollo:
+bash
+npm start
+Accede en http://localhost:3000
 
-### `npm test`
+Construir para producción:
+bash
+npm run build
+Esto genera la carpeta /build lista para despliegue 🚀.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🧪 Pruebas de accesibilidad
+La aplicación fue probada con:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Lighthouse (Chrome DevTools):
+✅ Accesibilidad 100 (mobile & desktop)
+axe DevTools:
+✅ 0 errores detectados
+WAVE:
+✅ Landmarks, heading order y labels correctos
+Pruebas manuales:
+Navegación exclusivamente con teclado (Tab, Shift+Tab)
+Lectura correcta en NVDA / VoiceOver
+📜 Licencia
+Este proyecto fue desarrollado como parte de la Actividad 2: Desarrollo de SPA accesible en el marco académico.
+Uso libre con fines educativos y de demostración.
