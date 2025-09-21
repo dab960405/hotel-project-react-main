@@ -16,7 +16,7 @@ Responsive: diseño responsivo utilizando React + Bootstrap, optimizado para mó
 🚀 Instalación y ejecución
 Clona este repositorio:
 bash
-git clone https://github.com/tu-usuario/hotel-spa-accesible.git
+git clone https://github.com/dab960405/hotel-project-react-main
 Instala las dependencias:
 bash
 npm install
