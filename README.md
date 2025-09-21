@@ -13,19 +13,6 @@ Formularios accesibles: inputs con label, campos obligatorios con required, mens
 Responsive: diseño responsivo utilizando React + Bootstrap, optimizado para móvil y escritorio.
 
 
-📂 Estructura de la aplicación
-text
-src/
- ├── components/
- │   ├── common/        # Header, Footer, CommonHeading, SocialIcons
- │   ├── home/          # Carousel, About, Services, Rooms, Teams, Sliders
- │   ├── data/          # Data.js (habitaciones, servicios, redes sociales, etc.)
- │   └── css/           # style.css con correcciones de accesibilidad (contraste, focus)
- ├── pages/             # Home, AboutUs, Booking, Rooms, Team, Testimonial, Contact, PageNotFound
- ├── App.js             # Rutas principales con React Router
- ├── index.js           # Bootstrap + render principal
-
-
 🚀 Instalación y ejecución
 Clona este repositorio:
 bash
