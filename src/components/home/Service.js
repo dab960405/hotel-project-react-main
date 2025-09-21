@@ -17,7 +17,7 @@ export default function Services() {
         </div>
 
         {/* Lista de servicios */}
-        <ul className="row g-4 list-unstyled mt-4" role="list">
+        <ul className="row g-4 list-unstyled mt-4">
           {services.map((item, index) => (
             <li
               key={index}
