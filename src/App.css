@@ -1,0 +1,115 @@
+.navbar-dark .navbar-nav .nav-link:hover, 
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #FFC107; /* Cambiado a amarillo para mejor contraste (8.17:1) */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    margin-right: 30px;
+    padding: 25px 0;
+    color: #FFFFFF;
+    font-size: 15px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: #FFC107; /* Añadido estado focus */
+    outline: 2px solid #FFC107; /* Indicador de foco visible */
+    outline-offset: 4px;
+}
+
+.carousel-caption {
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(15, 23, 43, 0.85); /* Aumentada opacidad para mejor contraste */
+}
+
+.bg-image {
+    background-image: url('../public/assets/img/carousel-1.jpg');
+    position: relative;
+}
+
+/* Mejoras de accesibilidad adicionales */
+.carousel-caption h2,
+.carousel-caption p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra de texto para mejor legibilidad */
+}
+
+/* Estilos para asegurar contraste en todos los elementos interactivos */
+.navbar-dark .navbar-nav .nav-link:hover::after,
+.navbar-dark .navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FFC107; /* Subrayado para elementos activos */
+}
+
+/* Asegurar que todos los elementos .text-primary usen el nuevo color con buen contraste */
+.text-primary {
+    color: var(--primary) !important; /* #8B5A00 en lugar de #fea116 */
+}
+
+
+/* Específicamente para el elemento "Staffs" */
+section[aria-label="Nuestro equipo"] .container .subtitle .text-primary {
+    color: var(--primary) !important; /* Ratio 6.8:1 sobre #f1f8ff */
+    font-size: 16px; /* 12.0pt */
+}
+
+/* Asegurar que el fondo claro tenga suficiente contraste con el texto */
+.bg-light {
+    background-color: var(--light) !important; /* #f1f8ff */
+}
+
+
+/* Clase para ocultar visualmente pero mantener accesibilidad */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Mejoras para los botones de redes sociales */
+.btn-social {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.btn-social:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+/* Si es necesario, ajustar el color de fondo para mejorar el contraste */
+@media (prefers-contrast: high) {
+    .bg-light {
+        background-color: #FFFFFF !important; /* Blanco puro para mayor contraste */
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-dark .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover::after,
+    .navbar-dark .navbar-nav .nav-link.active::after {
+        bottom: 5px;
+    }
+}
